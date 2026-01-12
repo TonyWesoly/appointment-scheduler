@@ -1,34 +1,22 @@
-package com.github.TonyWesoly.appointment_scheduler.model;
-
-import jakarta.persistence.*;
+package com.github.TonyWesoly.appointment_scheduler.dto;
 
 import java.time.DayOfWeek;
 import java.time.LocalTime;
 
-@Entity
-@Table(name = "availability")
-public class Availability {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class AvailabilityDto {
     private Long id;
-
-    //TODO: Add foreign key
-
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
     private DayOfWeek dayOfWeek;
-    @Column(nullable = false)
     private LocalTime startTime;
-    @Column(nullable = false)
     private LocalTime endTime;
 
-    public Availability() {
-    }
-
-    public Availability(DayOfWeek dayOfWeek, LocalTime startTime, LocalTime endTime) {
+    public AvailabilityDto(Long id, DayOfWeek dayOfWeek, LocalTime startTime, LocalTime endTime) {
+        this.id = id;
         this.dayOfWeek = dayOfWeek;
         this.startTime = startTime;
         this.endTime = endTime;
+    }
+
+    public AvailabilityDto() {
     }
 
     public Long getId() {
