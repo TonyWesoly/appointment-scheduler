@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 @Entity
-@Table(name = "appointment")
+@Table(name = "appointments")
 public class Appointment extends AuditEntity {
 
     @Id

@@ -6,7 +6,7 @@ import java.time.DayOfWeek;
 import java.time.LocalTime;
 
 @Entity
-@Table(name = "availability")
+@Table(name = "availabilities")
 public class Availability extends AuditEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
